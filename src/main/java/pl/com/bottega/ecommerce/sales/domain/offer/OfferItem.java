@@ -38,24 +38,17 @@ public class OfferItem {
         this.quantity = quantity;
         this.discount = discount;
 
-        this.totalCost = product.getProductPrice().multiply(new BigDecimal(quantity));
+        this.totalCost = product.getProductPrice().getCost().multiply(new BigDecimal(quantity));
 
         if (discount != null) {
-            this.totalCost = this.getTotalCost().subtract(discount.getDiscount());
+            this.totalCost = this.getTotalCost().subtract(discount.getDiscount().getCost());
         }
     }
 
     public BigDecimal getTotalCost() {
         return totalCost;
     }
-
-    public String getTotalCostCurrency() {
-        return currency;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
+    
 
     public Product getProduct() {
         return product;
