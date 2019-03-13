@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 
 public class OfferItem {
 
-    ProductData product;
+    private ProductData product;
 
     private int quantity;
 
@@ -45,7 +45,6 @@ public class OfferItem {
     public Money getTotalCost() {
         return totalCost;
     }
-
 
     public ProductData getProduct() {
         return product;
