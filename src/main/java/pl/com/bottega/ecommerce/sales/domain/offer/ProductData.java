@@ -4,7 +4,7 @@ package pl.com.bottega.ecommerce.sales.domain.offer;
 import java.util.Date;
 import java.util.Objects;
 
-public class Product {
+public class ProductData {
 
     private String productId;
     private Money productPrice;
@@ -12,7 +12,7 @@ public class Product {
     private Date productSnapshotDate;
     private String productType;
 
-    public Product(String productId, Money productPrice, String productName, Date productSnapshotDate, String productType) {
+    public ProductData(String productId, Money productPrice, String productName, Date productSnapshotDate, String productType) {
         this.productId = productId;
         this.productPrice = productPrice;
         this.productName = productName;
@@ -67,7 +67,7 @@ public class Product {
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
-        Product product = (Product) o;
+        ProductData product = (ProductData) o;
         return Objects.equals(productId, product.productId) && Objects.equals(productPrice, product.productPrice) && Objects.equals(
                 productName, product.productName) && Objects.equals(productSnapshotDate, product.productSnapshotDate) && Objects.equals(
                 productType, product.productType);
